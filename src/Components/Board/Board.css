@@ -1,0 +1,21 @@
+.individualRow {
+    column-gap: 10px;
+}
+
+.rowGap {
+    margin-left: 37.5%;
+}
+
+.widthForDiv {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+}
+
+.displayTurn {
+    margin-left: -61%;
+}
