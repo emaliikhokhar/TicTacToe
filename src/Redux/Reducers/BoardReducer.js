@@ -12,10 +12,12 @@ const initialState = {
 
 const BoardReducer = (state = initialState, action) => {
     switch(action.type) {
-        case "1":
+        case "SELECTED_BY_FIRST":
+            state = action.payload
             return state;
 
-        case "2":
+        case "SELECTED_BY_SECOND":
+            state = action.payload
             return state;
 
         default: return state;
