@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import Circle from '../../CIRCLE.png'
+import Cross from '../../CROSS.png'
+import White from '../../WHITE.png'
 import './Board.css'
 
 const Board = () => {
@@ -60,11 +63,11 @@ const Board = () => {
     }
 
     const showResult = () => {
-        
+
     }
 
     const gameCheck = () => {
-        
+
     }
 
     const dealingWithCases = (e, turn) => {
@@ -104,19 +107,61 @@ const Board = () => {
             <center>
                 <div className="m-5">
                     <div className="d-flex individualRow w-100">
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="1" style={data.index1 === 1 ? {backgroundColor : "green"} : data.index1 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="2" style={data.index2 === 1 ? {backgroundColor : "green"} : data.index2 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="3" style={data.index3 === 1 ? {backgroundColor : "green"} : data.index3 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="1">
+                            {
+                                data.index1 === 1 ? <img src={Circle} width="50" /> : data.index1 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="2" >
+                            {
+                                data.index2 === 1 ? <img src={Circle} width="50" /> : data.index2 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="3">
+                            {
+                                data.index3 === 1 ? <img src={Circle} width="50" /> : data.index3 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
                     </div>
                     <div className="d-flex individualRow w-100">
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="4" style={data.index4 === 1 ? {backgroundColor : "green"} : data.index4 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="5" style={data.index5 === 1 ? {backgroundColor : "green"} : data.index5 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="6" style={data.index6 === 1 ? {backgroundColor : "green"} : data.index6 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="4">
+                            {
+                                data.index4 === 1 ? <img src={Circle} width="50" /> : data.index4 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="5">
+                            {
+                                data.index5 === 1 ? <img src={Circle} width="50" /> : data.index5 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="6">
+                            {
+                                data.index6 === 1 ? <img src={Circle} width="50" /> : data.index6 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
                     </div>
                     <div className="d-flex individualRow w-100">
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="7" style={data.index7 === 1 ? {backgroundColor : "green"} : data.index7 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="8" style={data.index8 === 1 ? {backgroundColor : "green"} : data.index8 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
-                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="9" style={data.index9 === 1 ? {backgroundColor : "green"} : data.index9 === 2? {backgroundColor: "blue"} : {backgroundColor: "white"}}></div>
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="7">
+                            {
+                                data.index7 === 1 ? <img src={Circle} width="50" /> : data.index7 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img" />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="8">
+                            {
+                                data.index8 === 1 ? <img src={Circle} width="50" /> : data.index8 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
+
+                        <div className="p-4 widthForDiv" onClick={onClickHandler} id="9">
+                            {
+                                data.index9 === 1 ? <img src={Circle} width="50" /> : data.index9 === 2 ? <img src={Cross} width="50" /> : <img src={White} width="50" className="img"  />
+                            }
+                        </div>
                     </div>
                 </div>
 
@@ -131,7 +176,7 @@ const Board = () => {
                         </div>
                     }
                 </div>
-                
+
                 {/* Show Result */}
                 <div className="displayTurn mt-4">
                     <button className="btn btn-dark" onClick={showResult}>Show Result</button>
