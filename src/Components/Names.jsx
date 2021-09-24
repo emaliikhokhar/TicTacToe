@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useHistory } from 'react-router';
-import { toast } from 'react-toastify';
 
 const Names = () => {
 
@@ -9,7 +8,6 @@ const Names = () => {
     const [secondPlayerName, setSecondPlayerName] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
-    const players = useSelector((state) => state.play)
     const submitForm = (e) => {
         e.preventDefault();
 
